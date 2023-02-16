@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+body {
+    margin: 0;
+    background-color: hsl(225deg 100% 94%);
+    --default-font: 'Red Hat Display', sans-serif;
+    --primary-color: hsl(221deg 44% 23%);
+    --secondary-color: hsl(224deg 11% 61%);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        background-image: url(./images/pattern-background-mobile.svg)
+    } 
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 625px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: var(--default-font);
+    text-align: center;
+}
+
+.header-image {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+
+.headline {
+    margin-top: 3rem;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.information {
+    color: var(--secondary-color);
+    width: 30ch;
+}
+
+.plan-picker {
+    width:75%;
+    height: 75px;
+
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: hsl(230deg 75% 98%);
+}
+
+.plan-img {
+    height: 60%;
+    aspect-ratio: 1/1;
+    margin-right: 20px;
+}
+
+.picker-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.plan-name {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.plan-cost {
+    color: var(--secondary-color);
+}
+
+.plan-cost, .plan-name {
+    text-align: left;
+    margin: 0;
+}
+
+.change-plan {
+    color: hsl(246deg 52% 47%);
+    font-weight: 700;
+}
+
+.payment {
+    width:75%;
+    height: 45px;
+    border-style: none;
+    border-radius: 10px;
+    
+    margin-top: 20px;
+   
+    background-color: hsl(245deg 75% 52%);
+    color: white;
+   
+    font-weight: 900;
+    font-family: var(--default-font);
+    box-shadow: rgba(56, 41, 224, 0.428) 0px 7px 29px 0px;
+
+    cursor: pointer;
+}
+
+.cancel {
+    margin-top: 30px;
+    color: hsl(228deg 10% 53%);
+    font-size: .8rem;
+    font-weight: 900;
+    text-decoration: none;
+}
